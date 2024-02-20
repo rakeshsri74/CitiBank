@@ -1,0 +1,119 @@
+What is Web Service?
+    -It is a client-server application or application component for communication
+    -The method of communication between two devices over the network.
+    -It is software system for the interoperable machine to machine communication.
+          
+          
+  SOAP(Simple Object Access Protocol)
+  REST(Representational State Transfer)
+  GraphQL
+  
+  1.SOAP
+  2.REST(GET,POST,PUT and DELETE)
+       -Typically use JSON or XML for data exchange
+       -are more lightweight
+       
+ http://localhost:8000/stocks
+ 
+ 2.Understanding HTTP:
+     Request Method(HTTP Verbs):
+         -GET:
+         -POSt:
+         -PUT:
+         -DELETE:
+         
+   Status Code:
+       -Indicates the outcome of an HTTP request.They are grouped into five categories
+       
+       1XX : Informational
+       2XX : Success
+       3XX : Redirection
+       4XX : Client Error
+       5XX : Server Error
+       
+  3. Tools And Technologies Used To Develop RESt:
+  
+      Java - JAX-RS or SpringBoot
+      
+      Postman : A popular tool for API testing , collaboration , and documentation.
+      
+  4.Designing The REST API
+  
+      1.Identify Resources:/users,/products or /orders
+      2.Define URIs:URIs should represent nouns (resources) and use plural noun for collections
+      3.Use HTTP methods:
+      4.Use HTTP status code:Return appropriate HTTP status codes with resources to indicate the success or failure of         
+        requests.
+        
+        200 -- OK
+        201 -- Created
+        204 -- No Content
+        400 -- Bad Request
+        401 -- Unauthorized
+        404 -- Not Found
+        405 -- Method not allowed
+        500 -- Internal Server Error
+        
+        Request and Response Payloads : JSON or XML
+        
+   5. Java and Rest:
+       SpringBoot
+       JAX-RS
+       Jackson/GSON
+       JPA:
+       Testing Libraries:
+           Junit,Mockito,@WebMVC
+           Jupiter
+       Dependency Management Tools:Maven or Gradle
+       Security Libraries:Authentication,Authorization(OAuth or JWT)
+   6.Spring Boot and Rest
+       What is springboot?
+           Spring Boot is an open source java based framework that simplifies the process of building and deploying standalone,production grade spring based application.It provides a convention over configuration means that it reduces the amount of configuration required for setting up and running spring application.
+           
+           Key Features of Spring Boot:
+               1.Embedded server : 
+               2.Opinionated Default :
+               3.AutoConfiguration
+               4.Standalone
+               5.SpringInitializer
+               
+    @RestController
+    public class StockController {
+    //@GetMapping("/stocks")
+    @RequestMapping(path="/stocks",method=RequestMethod.GET)
+    public String stockData() {
+        return "Here is stock data";
+    }
+
+}
+
+@SpringBootApplication:It is a convenient annotation provided by the spring boot framework that combines three commonly used annotations.
+1.@SpringBootConfiguration:This annotation is used to indicates that the class provides configuration to the spring application context.It's a specialized form of the @Configuration annotation.
+
+2.@EnableAutoConfiguration:This annotation tells Spring Boot to automatically configure the application based on its dependencies and the classpath.It enables spring boot's auto configuration feature,which reduces the need of manual configuration
+
+3.@ComponentScan:This annotation tells spring to scan and discover other Spring components,such as Controller,Services,and Repositories,in the package and its aub-package where the application class is located.
+
+Difference between @Controller and @RestController
+
+@RestController = @Controller + @ResponseBody
+
+8.Spring @RequestBody and @ResponseBody
+
+9.Spring @ResponseStatus to set HttpStatus Code
+
+10.Resource In Rest
+
+http://localhost:8080/stocks
+
+11.Messages in Rest
+
+
+
+
+
+
+
+       
+     
+       
